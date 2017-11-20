@@ -54,7 +54,7 @@ The decoder section is made of the same number as encoders, but with transposed 
 Bilinear upsampling is the opposite of max pooling, it is a way to estimate the new pixel intensity value based on averaging neighbouring pixels. Bilinear upsampling has good performance, which is important for training large models quickly.
 
 
-Each decoder layer is meant to reverse and to deconstruct more of the image. The final decoder layer generates an image with the same size as the original. The output image is used for guiding the quadcopter.
+Each decoder layer is meant to reverse and to deconstruct more of the image. The final decoder layer generates an image with the same size as the original. The output segmented image is used for guiding the quadcopter.
 
 ## Neural Network parameters
 These parameters were found using trial and error and knowledge gained through the labs  
