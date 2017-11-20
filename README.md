@@ -1,4 +1,4 @@
-[![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
+[//]: # (Image References)
 [image_0]: ./docs/misc/followme.jpg
 [image_1]: ./docs/misc/1.png
 [image_2]: ./docs/misc/2.png
@@ -11,6 +11,10 @@
 [image_9]: ./docs/misc/66.png
 [image_10]: ./docs/misc/diagram.gif
 ## Deep Learning Project: Follow Me ##
+
+[![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
+
+
 
 In this project, I trained a deep neural network to identify and track a target in simulation. So-called “follow me” applications like this are key to many fields of robotics and the very same techniques I applied here could be extended to scenarios like advanced cruise control in autonomous vehicles or human-robot collaboration in industry.
 
