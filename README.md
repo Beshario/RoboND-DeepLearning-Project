@@ -18,7 +18,7 @@
 
 In this project, I trained a deep neural network to identify and track a target in simulation. So-called “follow me” applications like this are key to many fields of robotics and the very same techniques I applied here could be extended to scenarios like advanced cruise control in autonomous vehicles or human-robot collaboration in industry.
 
-The model is built in Tensor-flow and Keras, and the training was done using a K80 GPU enabled Amazon Web Services (AWS) compute instance.
+The model is built in Tensor-flow and Keras, and the training was done using an Amazon Web Services (AWS) compute instance.
 
 
 
@@ -102,3 +102,6 @@ This model was only trained on the person in the simulation. the same model can 
 
 
 
+
+- [Literature Review: Fully Convolutional Networks - David Silver (Medium)](https://medium.com/self-driving-cars/literature-review-fully-convolutional-networks-d0a11fe0a7aa)
+- 
