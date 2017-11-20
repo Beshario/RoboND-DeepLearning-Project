@@ -114,4 +114,6 @@ This model was only trained on the person in the simulation. the same model can 
 
 
 [SegNet: A Deep ConvolutionalEncoder-Decoder Architecture for Image Segmentation](https://arxiv.org/pdf/1511.00561.pdf)  
-[Literature Review: Fully Convolutional Networks - David Silver](https://medium.com/self-driving-cars/literature-review-fully-convolutional-networks-d0a11fe0a7aa)
+[Literature Review: Fully Convolutional Networks - David Silver](https://medium.com/self-driving-cars/literature-review-fully-convolutional-networks-d0a11fe0a7aa)  
+[What does 1x1 convolution mean in a neural network? (Cross Validated)](https://stats.stackexchange.com/questions/194142/what-does-1x1-convolution-mean-in-a-neural-network)
+
