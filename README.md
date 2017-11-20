@@ -45,8 +45,10 @@ The first and the second convolution uses a filter size of 32 and a stride of 2,
 The encoder portion can be of one or more encoders, each includes a separable convolution layer with batch normalization, and relu function. After that a maxpooling layer is added. 
 
 Each encoder block allows the model to build on what it learns from the previous block. For example, the first layer distinguishes very basic characteristics in the image, such as lines, brightness and hue. The next layer is able to identify more complicated shapes, a combination of lines, curves as squares, circles and curves. until a fourth or fifth layer can identify faces and humans.
+
 ### 1X1 Convolution ###
 1X1 Convolution layer adds an inexpensive non-linear classifier to the model, it also adds depth and can be very powerful when used with inception. 1X1 convolution helps in reducing the depth dimensionality of the layer. A fully-connected layer of the same size would result in the same number of features. However, with convolutional layers you can feed images of any size into the trained network.
+
 ###Skip connections ###
 is a way to retain some data by skipping a certain number of pairs (one encoder one decoder).The skipped connection image is used in the element-wise addition with the image going through C as shown in the image above. these connections allows the network to use data from different resolutions from the network.
 
@@ -85,6 +87,7 @@ The final score of the model is 0.404, while the final Intersection over Union o
 The produced Images are as follows:
 
 **on a closed range as the quad is following the person, it had a IoU of 0.85**
+
 ![in Action][image_1]:
 ![in Action][image_2]:
 ![in Action][image_3]:
@@ -97,6 +100,7 @@ The produced Images are as follows:
 
 
 **And finally when the quad was patrolling and the target was around, it had an IoU of 0.42 of identifying people and 0.23 of identifying the target. **
+
 ![in Action][image_7]:
 ![in Action][image_8]:
 ![in Action][image_9]:
