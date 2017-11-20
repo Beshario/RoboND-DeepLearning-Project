@@ -20,14 +20,19 @@ an FCN consists of sequence of processing layers (encoders) followed by a corres
 
 
 ### Encoder ###
-The encoder portion can be of one or more encoders, each includes a separable convolution layer.
+The encoder portion can be of one or more encoders, each includes a separable convolution layer with batch normalization, and relu function. After that a maxpooling layer is added. 
 
 Each encoder block allows the model to build on what it learns from the previous block. For example, the first layer distinguishes very basic characteristics in the image, such as lines, brightness and hue. The next layer is able to identify more complicated shapes, a combination of lines, curves as squares, circles and curves. until a fourth or fifth layer can identify faces and humans.
 
 
 ### Decoder ###
 
+The decoder section is made of the same number as encoders, but with transposed convolution layers that reverse the regular convolution layers, with a Bilinear upsampling layer after.
 
+Bilinear upsampling is the opposite of max pooling, it is a way to estimate the new pixel intensity value based on averaging neighbouring pixels. Bilinear upsampling has good performance, which is important for training large models quickly.
+
+
+Each decoder layer is meant to reverse and to deconstruct more of the image. The final decoder layer generates an image with the same size as the original. The output image is used for guiding the quadcopter.
 
 ### Validation Set ###
 To collect the validation set, repeat both sets of steps above, except using the directory `data/raw_sim_data/validation` instead rather than `data/raw_sim_data/train`.
