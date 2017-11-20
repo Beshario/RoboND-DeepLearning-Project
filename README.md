@@ -45,7 +45,10 @@ The first and the second convolution uses a filter size of 32 and a stride of 2,
 The encoder portion can be of one or more encoders, each includes a separable convolution layer with batch normalization, and relu function. After that a maxpooling layer is added. 
 
 Each encoder block allows the model to build on what it learns from the previous block. For example, the first layer distinguishes very basic characteristics in the image, such as lines, brightness and hue. The next layer is able to identify more complicated shapes, a combination of lines, curves as squares, circles and curves. until a fourth or fifth layer can identify faces and humans.
-
+### 1X1 Convolution ###
+1X1 Convolution layer adds an inexpensive non-linear classifier to the model, it also adds depth and can be very powerful when used with inception. 1X1 Convolution helps in reducing the dimensionality of the layer. A fully-connected layer of the same size would result in the same number of features. However, with convolutional layers you can feed images of any size into the trained network.
+###Skip connections ###
+is a way to retain some data by skipping a certain number of pairs (one encoder one decoder).The skipped connection image is used in the element-wise addition with the image going through C as shown in the image above. these connections allows the network to use data from different resolutions from the network.
 
 ### Decoder ###
 
@@ -58,15 +61,17 @@ Each decoder layer is meant to reverse and to deconstruct more of the image. The
 
 ## Neural Network parameters
 These parameters were found using trial and error and knowledge gained through the labs  
-**learning rate** = 0.001  
+**learning rate** = 0.001
 **batch size** = 100  
 **number of epochs** = 15  
 **steps per epoch** = 250  
 **validation steps** = 50  
 **workers** = 2  
 
+Lowering the learning rate made it possible for us to acheive a 40% overall IoU. an attempt at 0.05 learning rate was not successfull and ended up with 37 %overall IoU.  
+I also increased the batch size to 250, but all that caused was slower performance. A studied decision was made to increase both the number of epochs (epoch: one forward pass and one backward pass of all the training examples) and the steps per epoch, which acheived our current accracty.
 
-Increasing the number of epoch (epoch: one forward pass and one backward pass of all the training examples) was a sure way to increase the accuracy
+
 
 
 ## Training ##
@@ -91,7 +96,7 @@ The produced Images are as follows:
 ![in Action][image_6]:
 
 
-**And finally when the quad was patrolling and the target was around, it had an IoU of 0.42 of identifying people and 0.23 of identifying the target. this error is due to the lack of distant training images of the target, a better score could be gained through taking more images**
+**And finally when the quad was patrolling and the target was around, it had an IoU of 0.42 of identifying people and 0.23 of identifying the target. **
 ![in Action][image_7]:
 ![in Action][image_8]:
 ![in Action][image_9]:
@@ -100,7 +105,8 @@ The produced Images are as follows:
 ## Finally:
 This model was only trained on the person in the simulation. the same model can be used for anything of similar complexity as a human. more layers are needed for more complex imagery. This model could be used to segment animals and vehicles, however, it will need the required training beforehand.
 
-
+##future enhancement##
+The error resulted when the quad was patrolling and the target was around is due to the lack of distant training images of the target, a better score could be gained through taking more images. 
 
 Sources:
 
