@@ -12,7 +12,7 @@ The model is built in Tensor-flow and Keras, and the training was done using a K
 ![alt text][image_0] 
 
 ## Archeticture
-Many deep learning archetictures can be used to solve different machine vision proplems. SegNet is a deep learning architecture designed to solve image segmentation problem,
+Many deep learning archetictures can be used to solve different machine proplems. SegNet is a deep learning architecture designed to solve image segmentation problem,
 It consists of sequence of processing layers (encoders) followed by a corresponding set of decoders. By using encoding and decoding convolutional layers, the model is able to preserve spatial information through the network.
 
 ## Fully Convolutional Networks
