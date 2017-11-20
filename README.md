@@ -46,7 +46,7 @@ The encoder portion can be of one or more encoders, each includes a separable co
 
 Each encoder block allows the model to build on what it learns from the previous block. For example, the first layer distinguishes very basic characteristics in the image, such as lines, brightness and hue. The next layer is able to identify more complicated shapes, a combination of lines, curves as squares, circles and curves. until a fourth or fifth layer can identify faces and humans.
 ### 1X1 Convolution ###
-1X1 Convolution layer adds an inexpensive non-linear classifier to the model, it also adds depth and can be very powerful when used with inception. 1X1 Convolution helps in reducing the dimensionality of the layer. A fully-connected layer of the same size would result in the same number of features. However, with convolutional layers you can feed images of any size into the trained network.
+1X1 Convolution layer adds an inexpensive non-linear classifier to the model, it also adds depth and can be very powerful when used with inception. 1X1 convolution helps in reducing the depth dimensionality of the layer. A fully-connected layer of the same size would result in the same number of features. However, with convolutional layers you can feed images of any size into the trained network.
 ###Skip connections ###
 is a way to retain some data by skipping a certain number of pairs (one encoder one decoder).The skipped connection image is used in the element-wise addition with the image going through C as shown in the image above. these connections allows the network to use data from different resolutions from the network.
 
@@ -101,14 +101,13 @@ The produced Images are as follows:
 ![in Action][image_8]:
 ![in Action][image_9]:
 
+##Future enhancement##
+The error resulted when the quad was patrolling and the target was around is due to the lack of distant training images of the target, a better score could be gained through taking more images. In addition, a deeper layer could have been implemented instead of going wider.
+Sources:
 
 ## Finally:
 This model was only trained on the person in the simulation. the same model can be used for anything of similar complexity as a human. more layers are needed for more complex imagery. This model could be used to segment animals and vehicles, however, it will need the required training beforehand.
 
-##future enhancement##
-The error resulted when the quad was patrolling and the target was around is due to the lack of distant training images of the target, a better score could be gained through taking more images. 
-
-Sources:
 
 [SegNet: A Deep ConvolutionalEncoder-Decoder Architecture for Image Segmentation](https://arxiv.org/pdf/1511.00561.pdf)  
 [Literature Review: Fully Convolutional Networks - David Silver](https://medium.com/self-driving-cars/literature-review-fully-convolutional-networks-d0a11fe0a7aa)
