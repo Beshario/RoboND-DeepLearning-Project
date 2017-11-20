@@ -102,6 +102,7 @@ This model was only trained on the person in the simulation. the same model can 
 
 
 
+Sources:
 
-- [Literature Review: Fully Convolutional Networks - David Silver (Medium)](https://medium.com/self-driving-cars/literature-review-fully-convolutional-networks-d0a11fe0a7aa)
-- 
+[SegNet: A Deep ConvolutionalEncoder-Decoder Architecture for Image Segmentation](https://arxiv.org/pdf/1511.00561.pdf)  
+[Literature Review: Fully Convolutional Networks - David Silver](https://medium.com/self-driving-cars/literature-review-fully-convolutional-networks-d0a11fe0a7aa)
