@@ -46,10 +46,10 @@ The encoder portion can be of one or more encoders, each includes a separable co
 
 Each encoder block allows the model to build on what it learns from the previous block. For example, the first layer distinguishes very basic characteristics in the image, such as lines, brightness and hue. The next layer is able to identify more complicated shapes, a combination of lines, curves as squares, circles and curves. until a fourth or fifth layer can identify faces and humans.
 
-### 1X1 Convolution ###
+### 1X1Convolution ###
 1X1 Convolution layer adds an inexpensive non-linear classifier to the model, it also adds depth and can be very powerful when used with inception. 1X1 convolution helps in reducing the depth dimensionality of the layer. A fully-connected layer of the same size would result in the same number of features. However, with convolutional layers you can feed images of any size into the trained network.
 
-###Skip connections ###
+### Skip connections ###
 is a way to retain some data by skipping a certain number of pairs (one encoder one decoder).The skipped connection image is used in the element-wise addition with the image going through C as shown in the image above. these connections allows the network to use data from different resolutions from the network.
 
 ### Decoder ###
@@ -76,11 +76,11 @@ I also increased the batch size to 250, but all that caused was slower performan
 
 
 
-## Training ##
+## Training 
 The training was done on a p2.xlarge AWS instance. Training the model with the aforementioned Fully Convolutional Networks required about 40 minutes.
 
 
-## Scoring ##
+## Scoring 
 
 The final score of the model is 0.404, while the final Intersection over Union of  0.545
 
@@ -105,7 +105,7 @@ The produced Images are as follows:
 ![in Action][image_8]:
 ![in Action][image_9]:
 
-##Future enhancement##
+## Future enhancement
 The error resulted when the quad was patrolling and the target was around is due to the lack of distant training images of the target, a better score could be gained through taking more images. In addition, a deeper layer could have been implemented instead of going wider.
 Sources:
 
