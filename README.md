@@ -84,7 +84,7 @@ The produced Images are as follows:
 ![in Action][image_2]:
 ![in Action][image_3]:
 
-**While when the quad was patrolling and the target was not around, it had a IoU of identifying other peope 0.67 with 97 false positives. a false postives is constituted when the model determines an existence of the targed in three pixels or more with more than 50 certainty.**
+**But when the quad was patrolling and the target was not around, it had a IoU of identifying other peope 0.67 with 97 false positives. a false postives is constituted when the model determines an existence of the targed in three pixels or more with more than 50 certainty.**
 
 ![in Action][image_4]:
 ![in Action][image_5]:
@@ -98,7 +98,7 @@ The produced Images are as follows:
 
 
 ## Finally:
-This model was exclusively trained on the person in the simulation. the same model can be used for anything of similar complexity as a human. more layers are needed for more complex imagery. This model could be used to segment animals and vehicles, however, it will need the required training beforehand.
+This model was only trained on the person in the simulation. the same model can be used for anything of similar complexity as a human. more layers are needed for more complex imagery. This model could be used to segment animals and vehicles, however, it will need the required training beforehand.
 
 
 
