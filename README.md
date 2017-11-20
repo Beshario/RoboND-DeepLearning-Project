@@ -12,41 +12,21 @@ The model is built in Tensor-flow and Keras, and the training was done using a K
 ![alt text][image_0] 
 
 ## Archeticture
-Many deep learning archetictures can be used to solve different machine proplems. SegNet is a deep learning architecture designed to solve image segmentation problem,
-It consists of sequence of processing layers (encoders) followed by a corresponding set of decoders. By using encoding and decoding convolutional layers, the model is able to preserve spatial information through the network.
+Many deep learning archetictures can be used to solve different machine proplems. SegNet is a deep learning architecture designed to solve image segmentation problem. The network consists of Convlutional layers, convolutional layers have successfully been applied to analyzing visual imagery. 
+
 
 ## Fully Convolutional Networks
-
-Convolutional neural network is a class of deep neural networks that has been proven to  analyze visual imagery and classifying them. Through a filter 
-
+an FCN consists of sequence of processing layers (encoders) followed by a corresponding set of reverse processing layers (decoders). By encoding and decoding convolutional layers, the model is able to preserve spatial information through the network.
 
 
-## Collecting Training Data ##
-A simple training dataset has been provided in this project's repository. This dataset will allow you to verify that your segmentation network is semi-functional. However, if your interested in improving your score,you may want to collect additional training data. To do it, please see the following steps.
+### Encoder ###
+The encoder portion can be of one or more encoders, each includes a separable convolution layer.
 
-The data directory is organized as follows:
-```
-data/runs - contains the results of prediction runs
-data/train/images - contains images for the training set
-data/train/masks - contains masked (labeled) images for the training set
-data/validation/images - contains images for the validation set
-data/validation/masks - contains masked (labeled) images for the validation set
-data/weights - contains trained TensorFlow models
+Each encoder block allows the model to build on what it learns from the previous block. For example, the first layer distinguishes very basic characteristics in the image, such as lines, brightness and hue. The next layer is able to identify more complicated shapes, a combination of lines, curves as squares, circles and curves. until a fourth or fifth layer can identify faces and humans.
 
-data/raw_sim_data/train/run1
-data/raw_sim_data/validation/run1
-```
 
-### Training Set ###
-1. Run QuadSim
-2. Click the `DL Training` button
-3. Set patrol points, path points, and spawn points. **TODO** add link to data collection doc
-3. With the simulator running, press "r" to begin recording.
-4. In the file selection menu navigate to the `data/raw_sim_data/train/run1` directory
-5. **optional** to speed up data collection, press "9" (1-9 will slow down collection speed)
-6. When you have finished collecting data, hit "r" to stop recording.
-7. To reset the simulator, hit "`<esc>`"
-8. To collect multiple runs create directories `data/raw_sim_data/train/run2`, `data/raw_sim_data/train/run3` and repeat the above steps.
+### Decoder ###
+
 
 
 ### Validation Set ###
