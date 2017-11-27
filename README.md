@@ -1,5 +1,5 @@
 [//]: # (Image References)
-[image_0]: ./docs/misc/followme.jpg
+[image_0]: ./docs/misc/Untitled.jpeg
 [image_1]: ./docs/misc/1.png
 [image_2]: ./docs/misc/2.png
 [image_3]: ./docs/misc/3.png
